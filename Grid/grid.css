@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.item{
+    background-color: #efefef;
+}
+.item-1{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: header;
+    background-color: rgba(6, 6, 110, 0.777);
+}
+.item-2{
+    grid-area: banner;
+    /* background-color: cadetblue; */
+}.item-3{
+    grid-area: sidebar;
+    background-color: paleturquoise;
+}.item-4{
+    grid-area: main;
+    background-color: lightseagreen;
+}.item-5{
+    grid-area: gallery;
+    background-color: lightskyblue;
+    display: grid;
+    gap: 50px;
+}.item-6{
+    grid-area: footer;
+    background-color: rgba(6, 6, 110, 0.777);
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 50px 700px 500px auto 50px;
+    grid-template-areas: 
+                    "header header header header header"
+                    "banner banner banner banner banner"
+                    "sidebar main main main main"
+                    "gallery gallery gallery gallery gallery"
+                    "footer footer footer footer footer";
+}
+.item-1 h2{
+    display: flex;
+    font-size: 30px;
+    padding: 5px 30px;
+    width: 300px;
+    color: rgb(48, 210, 255);
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    animation-name: glow;
+    animation-duration: 5s;
+}
+@keyframes glow{
+    0% {color: rgb(48, 210, 255);}
+    25% {color: blue;}
+    50% {color: black;}
+    100% {color: whitesmoke;}
+}
+.nav{
+    display: inline-flex;
+    text-align: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 140px;
+    line-height: 50px;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+.nav:hover{
+    background-color: rgb(0, 0, 0);
+    color: lightseagreen;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .6s;
+    width: 150px;
+    display: inline-flex;
+    box-shadow: 0px 0px 4px 1px rgba(222, 222, 255, 0.63);
+    font-size: 22px;
+    text-decoration: underline;
+}
+.img-container img{
+    width: 100%;
+}
+.item-5{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+}
+.img-container-2{
+    width: 100%;
+}
+.img{
+    width: 400px;
+    height: 200px;
+    flex-wrap: wrap;
+}
