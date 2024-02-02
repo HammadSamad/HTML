@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.item{
+    background-color: #efefef;
+}
+.item-1{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: header;
+    background-color: rgba(6, 6, 110, 0.777);
+}
+.item-2{
+    grid-area: banner;
+    /* background-color: cadetblue; */
+}.item-3{
+    grid-area: sidebar;
+    background-color: paleturquoise;
+}.item-4{
+    grid-area: main;
+    background-color: lightseagreen;
+}.item-5{
+    grid-area: gallery;
+    /* background-color: lightskyblue; */
+    display: grid;
+    gap: 50px;
+}.item-6{
+    grid-area: footer;
+    background-color: rgba(6, 6, 110, 0.777);
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 50px 700px 500px auto 50px;
+    grid-template-areas: 
+                    "header header header header header"
+                    "banner banner banner banner banner"
+                    "sidebar main main main main"
+                    "gallery gallery gallery gallery gallery"
+                    "footer footer footer footer footer";
+}
+.item-1 h2{
+    display: inline-flex;
+    font-size: 30px;
+    padding: 0px 30px;
+    width: 300px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.nav{
+    display: inline-flex;
+    text-align: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 140px;
+    line-height: 50px;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+.nav:hover{
+    background-color: rgb(0, 0, 0);
+    color: lightseagreen;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .6s;
+    width: 145px;
+    box-shadow: 0px 0px 4px 1px rgba(222, 222, 255, 0.63);
+    font-size: 22px;
+    text-decoration: underline;
+}
+.img-container img{
+    width: 100%;
+}
+.item-5{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 1px 1px 2px whitesmoke, 3px 3px 4px blueviolet;
+}
+.img-container-2{
+    width: 100%;
+    position: relative;
+}
+.img{
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+.img:hover{
+    border: 1px solid black;
+    opacity: 0.8;
+    transition: ease-in-out 0.2s;
+}
