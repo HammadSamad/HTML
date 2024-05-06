@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
 
 *{
     box-sizing: border-box;
@@ -8,59 +6,161 @@
     padding: 0;
     list-style: none;
     font-family: "Titillium Web", sans-serif;
+    color: white;
 }
 
-.web-logo{
-    font-size: 1.5rem;
-    margin-left: 0.5in;
+body{
+    background-color: rgba(33,33,33,0.900);
 }
 
-.web-logo a{
-    text-decoration: none;
+/* navbar start */
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(33,33,33);
+    box-shadow: 2px 2px 6px black;
+    height: 60px;
+    padding: 0px 50px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.logo{
     line-height: 60px;
 }
 
-.navig{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.1);
-    align-items: center;
-}
-
-.navig ul{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0.5in;
-}
-
-.navig li{
-    width: 120px;
-    text-align: center;
-    padding: 8px;
-    line-height: 40px;
-}
-
-.navig li a{
+.logo a{
     text-decoration: none;
-    font-size: 22px;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 18px 0px;
 }
 
-.navig ul li::after{
-    content: '';
+.logo a:hover{
+    color: lime;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.nav-list li{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-list li::after{
+    content: "";
+    height: 2px;
     width: 0%;
-    height: 2px;
+    background: lime;
     margin: auto;
-    background: red;
-    transition: 0.5s;
+    transition: all 0.3s;
 }
 
-.navig ul li:hover::after{
-    height: 2px;
+.nav-list li:hover::after{
     width: 100%;
 }
 
 
+.navbar li a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 18px 24px;
+}
+
+.nav-list .dropdown{
+    background: rgba(33, 33, 33);
+    position: absolute;
+    display: none;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 8px;
+}
+
+.nav-list .dropdown li{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-links:hover{
+    color: lime;
+}
+
+.nav-list li:hover .dropdown{
+    display: block;
+}
+
+.menu-btn{
+    background: url(Images/menu.png)no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 30px;
+    height: 60px;
+    display: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-btn.active{
+    z-index: 999;
+    background: url(Images/cross.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 980px) {
+    .menu-btn,.active{
+        display: block;
+        position: absolute;
+        right: 22px;
+        z-index: 999;
+    }
+    
+    .header{
+        padding: 0px 22px;
+    }
+    
+    .navbar{
+        display: none;
+    }
+
+    .navbar.active{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        z-index: 999;
+    }
+
+    .nav-list{
+        display: block;
+    }
+
+    .nav-list li{
+        text-align: center;
+        background-color: red;
+    }
+}
+
+
+/* navbar end */
 
 
 
