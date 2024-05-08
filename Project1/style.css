@@ -17,16 +17,12 @@
     box-shadow: 2px 2px 6px rgb(230, 230, 230);
     position: absolute;
     width: 100%;
-    background-attachment: scroll;
-    scroll-behavior: smooth;
-    scrollbar-color: orange;
     top: 0;
     left: 0;
 }
 
 .navbar{
     display: flex;
-    align-items: center;
 }
 
 .logo{
@@ -85,6 +81,7 @@
 .nav-list li .dropdown{
     display: none;
     z-index: 999;
+    transition: all 0.4s;
 }
 
 .nav-list li:hover .dropdown{
@@ -120,11 +117,12 @@
 
 @media (max-width: 980px){
     .header{
-        padding: 0px 30px;
+    padding: 0px 30px;
     }
 
     .navbar{
         display: none;
+        transition: 0.4s;
     }
 
 .nav-list{
@@ -132,13 +130,14 @@
         justify-content: start;
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         position: absolute;
         left: 0;
         z-index: 999;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        background-color: rgb(230, 230, 230);
+        background-color: white;
+        box-shadow: 2px 2px 6px rgb(230, 230, 230);
         transition: tranform 0.3s ease;
     }
 
@@ -169,11 +168,13 @@
         box-shadow: 2px 2px 6px rgb(220, 220, 220);
         left: 110px;
         top: 0px;
+        transition: 0.3s;
     }
 
     .nav-list .dropdown li{
         position: relative;
         text-align: center;
+        transition: 0.4s;
     }
 
     .logo{
