@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLORAL</title>
+    <link rel="shortcut icon" href="images/floral_logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <a class="logo" href="index.html"><img src="Images/floral_logo-removebg-preview.png"></a>
+
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Events <ion-icon class="icon" name="caret-down-outline"></ion-icon></a>
+                <div class="dropdown">
+                    <ul class="nav-list2">
+                        <li><a href="#">Wedding</a></li>
+                        <li><a href="#">Anniversary</a></li>
+                        <li><a href="#">Engagement</a></li>
+                        <li><a href="#">Birthday</a></li>
+                    </ul>
+                </div>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-btn">
+            <div class="cross-btn"></div>
+        </div>
+    </header>
+
+    <!-- slider start -->
+
+    <body>
+
+        <div id="caroussel">
+      
+          <div class="img-caroussel active" data-img="1" style="background-image: url(Images/pexels-imagestudio-1488310.jpg)">
+          </div>
+      
+          <div class="img-caroussel" data-img="2" style="background-image: url(Images/pexels-iriser-974871.jpg)">
+          </div>
+      
+          <div class="img-caroussel" data-img="3" style="background-image: url(Images/pexels-olly-947914.jpg)">
+          </div>
+      
+          <div class="img-caroussel" data-img="4" style="background-image: url(Images/pexels-pixabay-207518.jpg)">  
+          </div>
+
+          <div class="img-caroussel" data-img="5" style="background-image: url(Images/pexels-pixabay-432905.jpg)">  
+        </div>
+      
+          <div class="arrows">
+            <i class="fa-solid fa-arrow-left" id="previous"></i>
+            <i class="fa-solid fa-arrow-right" id="next"></i>
+          </div>
+      
+          <div class="slider-position">
+            <span class="round active" data-img="1"></span>
+            <span class="round" data-img="2"></span>
+            <span class="round" data-img="3"></span>
+            <span class="round" data-img="4"></span>
+            <span class="round" data-img="5"></span>
+          </div>
+      
+        </div>
+      
+      </body>
+
+
+    <!-- slider end -->
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
