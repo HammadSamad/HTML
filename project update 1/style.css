@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: black;
 }
 
@@ -17,8 +17,9 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 60px;
-    background-color: rgb(255, 206, 237);
-    box-shadow: 2px 2px 6px rgb(230, 230, 230);
+    /* background-color: rgb(255, 194, 242); */
+    /* box-shadow: 2px 2px 6px rgb(230, 230, 230); */
+    background-color: white;
     position: sticky;
     width: 100%;
     top: 0;
@@ -188,8 +189,7 @@
     .nav-list .dropdown li{
         position: relative;
         text-align: center;
-        transition: 0.3s ease;
-            
+        transition: 0.3s ease;    
     }
 
     .logo{
@@ -218,12 +218,21 @@
   
   #caroussel {
     width: 100%;
-    height: 800px;
+    height: 650px;
     margin: auto;
     position: absolute;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+
+  #caroussel .arrows i{
+    display: none;
+  }
+
+  #caroussel:hover .arrows i{
+    display: block;
+    float: left;
   }
   
   .img-caroussel {
@@ -235,7 +244,8 @@
     opacity: 0;
     position: absolute;
     width: 100%;
-    border-radius: 10px;
+
+    /* border-radius: 10px; */
   }
   
   .img-caroussel.active {
@@ -261,6 +271,7 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    transform: translateX(-50%);
     margin-left: 60px;
   }
   
@@ -269,6 +280,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    transform: translateX(50%);
     margin-right: 60px;
   }
   
