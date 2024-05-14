@@ -1,4 +1,4 @@
-// java script for responsive navbar //
+// java script for responsive navbar start //
 
 let menuBtn = document.querySelector(".menu-btn");
 let navbigation = document.querySelector(".navbar");
@@ -8,9 +8,15 @@ menuBtn.addEventListener("click", () => {
     navbigation.classList.toggle("navbar");
 });
 
+// java script for responsive navbar end //
+
+
+// java script for responsive slider start //
+
 const img_slider_elements = document.querySelectorAll(".img-caroussel");
 const arrows_elts = document.querySelectorAll(".arrows i");
 const round_elts = document.querySelectorAll(".round");
+
 
 let current_img = 1;
 
@@ -57,5 +63,39 @@ function change_img_slider(e) {
     }
   });
 }
+
+// java script for responsive slider end //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
