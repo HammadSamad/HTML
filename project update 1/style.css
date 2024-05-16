@@ -43,6 +43,7 @@
    background: var(--bg-light);
    padding: 23px;
    border-radius: 27px;
+   width: 400px;
  }
  
  .tpn_card img {
