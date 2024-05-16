@@ -225,6 +225,16 @@
     <div class="menu-btn">
         <div class="cross-btn"></div>
     </div>
+   
+   
+    <script>
+    let menuBtn = document.querySelector(".menu-btn");
+        let navbigation = document.querySelector(".navbar");
+        
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navbigation.classList.toggle("navbar");
+        });</script>
 </header>
 
 
