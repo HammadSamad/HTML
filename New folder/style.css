@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100%;
+    background: url(abstract-background-with-colorful-glowing-neon-lights.jpg) no-repeat;
+    background-size: cover;
+    height: 600px;
+    animation: animate 5s linear 1s infinite;
+}
+
+@keyframes animate{
+    
+    100%{
+    filter: hue-rotate(360deg);
+    }
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 60px;
+    margin-right: 30px;
+}
+
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav-list a{
+    font-size: 18px;
+    padding: 18px 26px;
+    color: rgb(233, 233, 233);
+    transition: 0.2s ease-in-out;
+}
+
+.nav-list a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.nav-list a::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: red;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: right;
+}
+
+.nav-list a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+header > a{
+    font-size: 28px;
+    line-height: 60px;
+    margin-left: 30px;
+    height: 60px;
+}
+
+#menu-btn{
+    display: none;
+}
+
+#close-btn{
+    display: none;
+}
+
+@media (max-width: 768px){
+        #menu-btn{
+            color: white;
+            font-size: 28px;
+            margin-right: 30px;
+            cursor: pointer;
+            display: block;
+            margin-top: 16px;
+            }
+            
+            #menu-btn.active{
+                color: white;
+                font-size: 28px;
+                margin-right: 30px;
+                cursor: pointer;
+                display: none;
+                margin-top: 16px;
+                position: absolute;
+                transition: all 0.3s linear;
+        }
+
+        #close-btn{
+            display: flex;
+            position: absolute;
+            top: 12px;
+            font-size: 36px;
+            right: 12px;
+            color: white;
+            align-self: flex-start;
+            cursor: pointer;
+        }
+
+        #close-btn:hover{
+            color: red;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: -100%;
+            height: 100%;
+            width: 50%;
+            background-color: rgb(33, 33, 33);
+            background-attachment: scroll;
+            transition: all 0.3s linear;
+        }
+
+        .nav-list{
+            display: flex;
+            flex-direction: column;      
+            text-align: center;
+        }
+            
+        .navbar.active{
+            left: 0%;
+        }
+
+        .nav-list li{
+            line-height: 60px;
+        }
+}
+
+@media (max-width: 425px){
+    .navbar{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
