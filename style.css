@@ -17,7 +17,7 @@ header{
     height: 80px;
     padding: 0px 60px;
     background-color: rgb(43, 43, 43);
-    position: relative;
+    position: sticky;
 }
 
 .logo{
@@ -191,12 +191,11 @@ header{
 
 /* dropdown work start */
 
-.nav-items .drop{
+.drop{
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 170px;
-    top: 60px;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 1.5px rgb(112, 112, 112);
     background-color: rgb(43, 43, 43);
@@ -205,22 +204,21 @@ header{
     transition: 0.2s ease-in-out;
 }
 
+.drop.active{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+}
+
 hr{
     height: 1px;
     border: none;
     background-color: whitesmoke;
 }
 
-.nav-items .drop li a{
+.drop li a{
     padding: 14px 18px;
     font-size: 16px;
-}
-
-.nav-items li:hover .drop{
-    visibility: visible;
-    top: 80px;
-    position: absolute;
-    opacity: 1;
 }
 
 .nav-items li .drop-svg{
@@ -228,6 +226,10 @@ hr{
     position: relative;
     fill: rgb(100, 100, 100);
     transition: 0.3s ease-in-out;
+}
+
+.drop-svg.active{
+    transform: rotate(-180deg);
 }
 
 .nav-items li:hover .drop-svg{
@@ -308,6 +310,7 @@ hr{
 @media (max-width: 960px){
     header{
         padding: 0px 30px;
+        position: relative;
     }
 
     .logo{
@@ -321,6 +324,10 @@ hr{
         font-size: 20px;
     }
 
+    .nav-items{
+        margin-top: 80px;
+    }
+
     header .web-nav{
         display: flex;
         flex-direction: column;
@@ -329,9 +336,7 @@ hr{
         width: 50%;
         height: 100%;
         background-attachment: scroll;
-        overflow-y: scroll;
-        top: 80px;
-        /* background-color: rgb(56, 56, 56); */
+        top: 0;
         background-color: rgb(43, 43, 43);
         transition: 0.3s ease-in-out;
     }
@@ -344,6 +349,7 @@ hr{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        position: relative;
     }
 
     .nav-items li a{
@@ -373,24 +379,21 @@ hr{
         width: 18rem;
     }
 
-    .nav-items .drop{
+    .drop{
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
+        width: 100%;
         border-radius: 5px;
         box-shadow: none;
         background-color: rgb(43, 43, 43);
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-in-out;
+        transition: 0.3s linear;
     }
 
-    .nav-items li:hover .drop{
-        visibility: visible;
-        top: 0px;
+    .drop.active{
+        display: flex;
+        flex-direction: column;
         position: relative;
-        opacity: 1;
     }
 
 }
