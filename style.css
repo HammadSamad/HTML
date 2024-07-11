@@ -20,13 +20,28 @@ header{
     position: sticky;
 }
 
+header > a{
+    text-decoration: none;
+}
+
 .logo{
     display: flex;
     flex-wrap: wrap;
     font-size: 38px;
     font-weight: 500;
-    color: whitesmoke;
+    color: transparent;
+    background: linear-gradient(to left, rgb(82, 151, 255), rgb(167, 100, 255));
+    background-clip: text;
+    animation: hue 1.5s linear 1s infinite alternate;
 }
+
+@keyframes hue{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
 
 
 /* navbar-items work start */
@@ -332,7 +347,7 @@ hr{
         display: flex;
         flex-direction: column;
         position: fixed;
-        left: -100%;
+        left: -50%;
         width: 50%;
         height: 100%;
         background-attachment: scroll;
